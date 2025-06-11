@@ -14,7 +14,7 @@ public class ShoppingItemAdapter extends RecyclerView.Adapter<ShoppingItemAdapte
     private List<ShoppingItem> shoppingList;
     private OnItemActionListener listener;
 
-    // Interface để xử lý sự kiện click trên nút Edit/Delete
+
     public interface OnItemActionListener {
         void onEditClick(int position);
         void onDeleteClick(int position);
@@ -58,10 +58,9 @@ public class ShoppingItemAdapter extends RecyclerView.Adapter<ShoppingItemAdapte
         return shoppingList.size();
     }
 
-    // Cập nhật danh sách và thông báo cho RecyclerView
     public void updateList(List<ShoppingItem> newList) {
         this.shoppingList = newList;
-        notifyDataSetChanged(); // Thông báo rằng dữ liệu đã thay đổi
+        notifyDataSetChanged();
     }
 
     public static class ShoppingItemViewHolder extends RecyclerView.ViewHolder {
